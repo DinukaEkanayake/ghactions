@@ -6,7 +6,8 @@ on:
 
 jobs:
   comment:
-    runs-on:
+    runs-on: ubuntu-latest
+    steps:
       - name: "dump github context"
         run: echo '${{ toJSON(github.event) }}' | jq
         shell: bash
